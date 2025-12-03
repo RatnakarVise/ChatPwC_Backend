@@ -1,7 +1,7 @@
 from dataclasses import dataclass
 from typing import Optional
 from ..llm.base import LLMClient
-from ..storage.memory_store import ChatSession
+from ..storage.memory_store import Chat
 
 
 @dataclass
@@ -20,6 +20,6 @@ class BaseAgent:
         job_id: str,
         prompt: str,
         llm_client: LLMClient,
-        chat: ChatSession,
+        chat: Chat,
     ) -> AgentResult:
         raise NotImplementedError

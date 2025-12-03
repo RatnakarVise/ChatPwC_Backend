@@ -2,7 +2,7 @@ from pathlib import Path
 from .base_agent import BaseAgent, AgentResult
 from ..llm.base import ChatMessage
 from ..rag.simple_rag import get_context_for_abap
-from ..storage.memory_store import ChatSession
+from ..storage.memory_store import Chat
 from ..llm.base import LLMClient
 from ..utils.docx_generator import create_ts_docx
 
@@ -17,7 +17,7 @@ class TSFSAgent(BaseAgent):
         job_id: str,
         prompt: str,
         llm_client: LLMClient,
-        chat: ChatSession,
+        chat: Chat,
     ) -> AgentResult:
         # prompt = ABAP code
         abap_code = prompt
