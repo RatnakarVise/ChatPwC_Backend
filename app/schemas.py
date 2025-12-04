@@ -22,7 +22,7 @@ class ChatResponse(BaseModel):
     model: str
     agent_id: str
     title: Optional[str]
-    created_at: datetime
+    created_at: Optional[datetime] = None
 
 
 class ChatHistoryResponse(BaseModel):
